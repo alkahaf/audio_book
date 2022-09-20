@@ -1,7 +1,7 @@
 import pyttsx3
 import PyPDF2
 
-with open('ATOM.pdf', 'rb') as book:
+with open('ATOM.pdf', 'rb') as book: # Enter your pdf name here
 
     full_text = ""
 
@@ -15,8 +15,12 @@ with open('ATOM.pdf', 'rb') as book:
         content = next_page.extractText()
         full_text += content
 
-    audio_reader.save_to_file(full_text, "myaudiobook.mp3")
+    audio_reader.save_to_file(full_text, "myaudiobook.mp3") # save file in mp3 formatte
     audio_reader.runAndWait()
+    
+    
+# this code only read pdf text including symbols
+
 # book = open('ATOM.pdf', 'rb')
 # pdfReader = PyPDF2.PdfFileReader(book)
 # pages = pdfReader.numPages
